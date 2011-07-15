@@ -108,7 +108,7 @@
 				return defaultValue;
 			}
 			
-			if ( this.isNothing(el.UtilData[key]) ){
+			if ( this.isEmpty(el.UtilData[key]) ){
 				return defaultValue;
 			}
 			
@@ -205,18 +205,30 @@
 		
 		
 		
-		/*
-		 * Function: isNothing
-		 */
-		isNothing: function (obj) {
-			if (typeof obj === "undefined" || obj === null) {
-				return true;
-			}	
-			return false;
-		},
-		
-		
-		
+    /*
+     * Function: isNothing
+     */
+    isNothing: function (obj) {
+      if (typeof obj === "undefined" || obj === null) {
+        return true;
+      } 
+      return false;
+    },
+    
+    
+    
+    /*
+     * Function: isEmpty
+     */
+    isEmpty: function (obj) {
+      if (typeof obj === "undefined" || obj === null || obj === "") {
+        return true;
+      } 
+      return false;
+    },
+    
+    
+    
 		/*
 		 * Function: isFunction
 		 */
